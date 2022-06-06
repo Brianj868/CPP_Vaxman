@@ -259,6 +259,7 @@ void resetGame(){
     yIncrement = 0;
     rotation = 0;
     points = 0;
+    start = time(0);
     for (int i = 0; i < 256; i++){
         keyStates[i] = false;
     }
@@ -430,7 +431,7 @@ void welcomeScreen(){
     glRasterPos2f(150, 200);
     while (*message)
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, *message++);
-    message = "To control Pacman use A to go right, D to go left, W to go up and S to go down.";
+    message = "To control Pacman use A to go left, D to go right, W to go up and S to go down.";
     glRasterPos2f(50, 400);
     while (*message)
         glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *message++);
